@@ -1,5 +1,6 @@
-# AGH_ASD
+# Algorytmy i Struktury Danych - semestr 2. (2018/2019)
 
-Zadania z Algorytmów i Struktur Danych - semestr 2. (2018/2019)
+Informatyka - WIEiT - AGH
+
 ---
-Autor: Jacek Nitychoruk
+Copyright © 2019 Jacek Nitychoruk
