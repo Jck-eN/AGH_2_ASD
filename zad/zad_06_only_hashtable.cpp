@@ -2,10 +2,8 @@
 #include <cmath>
 using namespace std;
 
-
 struct Data{
     int number;
-    int idx;
 };
 
 struct ht_el{
@@ -15,7 +13,7 @@ struct ht_el{
 };
 
 int hash_single(int kn, int s){
-    double a = (((double)kn*0.618033)-floor(kn*0.618033))*s;
+    double a = (fmod(kn*0.618033, 1.0))*s;
     return (int)a;
 
 }
@@ -44,7 +42,11 @@ void ht_print(hashtable* ht){
     cout << "Tablica z haszowaniem. Rozmiar: " << ht->size << endl;
     cout << "_______zajety:___usun:_______" << endl;
     for(int i=0; i<ht->size; i++){
-        cout << i << ". " << ht->element[i].data->number  << " \t[" << ht->element[i].data->number << "] \t"<< ht->element[i].zajety <<" \t" << ht->element[i].usun << endl;
+        if(ht->element[i].data!=NULL){
+            cout << i << ". " << ht->element[i].data->number  << "\t" << ht->element[i].zajety <<"\t" << ht->element[i].usun << endl;
+        }else{
+             cout << i << ". " << "<~>"  << "\t" << ht->element[i].zajety <<"\t" << ht->element[i].usun << endl;
+        }
     }
     cout << "________________________________" << endl;
 }
@@ -94,7 +96,7 @@ void ht_remove(hashtable* ht, int k){
         }
         else i++;
     }
-    while(ht->element[j].zajety || ht->element[j].usun || i<ht->size);
+    while(ht->element[j].zajety or ht->element[j].usun or i<ht->size);
 }
 
 void ht_reorganize(hashtable* ht){
@@ -117,31 +119,16 @@ void ht_reorganize(hashtable* ht){
 
     return;
 }
-/*
-2. Dana jest nieposortowana tablica A[N] oraz liczba x.
-Proszę napisać funkcję, która sprawdza na ile sposobów można przedstawić
-x jako sumę A[i]+A[j] takiego że i<j.
-*/
-
-int sum(int x, int* A, int N){
-    hashtable* ht = new hashtable(N);
-    int counter = 0;
-    Data* tmp;
-    for(int i=0; i<N; i++){
-        tmp=NULL;
-        int szuk=x-A[i];
-        tmp=ht_search(ht, szuk);
-        if(tmp!=NULL && tmp->idx > i) counter++;
-    }
-    return counter;
-}
-
-
 
 int main()
 {
-
+    hashtable* tab = new hashtable(15);
+    Data data[10] = {{1},{2},{3},{4},{5},{6},{7},{8},{9},{0}};
+    for(int i=0; i<10; i++){
+    ht_insert(tab, &data[i]);
+    }
+    
+    ht_print(tab);
     cout << endl;
-    system("pause");
     return 0;
 }
