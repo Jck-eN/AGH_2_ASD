@@ -96,7 +96,7 @@ void ht_remove(hashtable* ht, int k){
         }
         else i++;
     }
-    while(ht->element[j].zajety or ht->element[j].usun or i<ht->size);
+    while(ht->element[j].zajety || ht->element[j].usun || i<ht->size);
 }
 
 void ht_reorganize(hashtable* ht){
