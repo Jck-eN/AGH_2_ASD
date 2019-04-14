@@ -6,7 +6,7 @@
 #include <ctime>
 using namespace std;
 
-const int MAX = 100000;
+const int MAX = 10000000;
 
 void ArrayRandomize(int t[])
 {
@@ -156,59 +156,100 @@ void HeapSort(int t[]){
         heapify(t, 1);
     }
 }
+// Quicksort
+
+int Partition(int t[], int p, int r){
+    int x=t[r];
+    int i, j;
+    i=p-1;
+    for(j=p; j<r; j++){
+        if(t[j]<x){
+            i++;
+            swap(t[j], t[i]);
+        }
+    }
+    swap(t[r], t[i+1]);
+    return i+1;
+}
+
+void QuickSort(int t[], int p, int r){
+    if(p<r){
+        int q = Partition(t, p, r);
+        QuickSort(t, p, q-1);
+        QuickSort(t, q+1, r);
+    }
+}
 
 int main()
     {
-    int* t = new int[MAX];
-    ArrayRandomize(t);
-        
- //   ArrayShow(t);
-    clock_t begin = clock();
-    SelectionSort(t);
-    clock_t end = clock();
-    double elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;
-    cout << "---" << endl;
-    cout << "Czas insertion: " <<  elapsed_secs<< endl;
- //   ArrayShow(t);
-
-    ArrayRandomize(t);
- //   ArrayShow(t);
-    begin = clock();
-    SelectionSort(t);
-    end = clock();
-    elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;
-    cout << "---" << endl;
-    cout << "Czas selection: " << elapsed_secs<< endl;
- //   ArrayShow(t);
-
-    ArrayRandomize(t);
- //   ArrayShow(t);
-    begin = clock();
-    SelectionSort(t);
-    end = clock();
-    elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;
-    cout << "---" << endl;
-    cout << "Czas bubble: " << elapsed_secs<< endl;
-
+        cout << "Liczba obiektow do sortowania: " << MAX << endl;
+        cout <<"--------------------------------" << endl;
+        int* t = new int[MAX];
+        ArrayRandomize(t);
+        clock_t begin;
+        clock_t end;
+        double elapsed_secs;
+        /*
     //   ArrayShow(t);
-    begin = clock();
-    MergeSort(t);
-    end = clock();
-    elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;
-    cout << "---" << endl;
-    cout << "Czas merge: " <<  elapsed_secs<< endl;
-   // ArrayShow(t);
+        begin = clock();
+        SelectionSort(t);
+        end = clock();
+        elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;
+        cout << "---" << endl;
+        cout << "InsertionSort: " <<  elapsed_secs<< endl;
+    //   ArrayShow(t);
 
-    ArrayRandomize(t);
-    t[0]=MAX;
- //   ArrayShow(t);
-    begin = clock();
-    HeapSort(t);
-    end = clock();
-    elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;
-    cout << "---" << endl;
-    cout << "Czas heapsort: " << elapsed_secs<< endl;
-    
+        ArrayRandomize(t);
+    //   ArrayShow(t);
+        begin = clock();
+        SelectionSort(t);
+        end = clock();
+        elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;
+        cout << "---" << endl;
+        cout << "SelectionSort: " << elapsed_secs<< endl;
+    //   ArrayShow(t);
+
+        ArrayRandomize(t);
+    //   ArrayShow(t);
+        begin = clock();
+        SelectionSort(t);
+        end = clock();
+        elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;
+        cout << "---" << endl;
+        cout << "BubbleSort: " << elapsed_secs<< endl;
+
+*/
+
+
+
+        ArrayRandomize(t);
+        //   ArrayShow(t);
+        begin = clock();
+        MergeSort(t);
+        end = clock();
+        elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;
+        cout << "---" << endl;
+        cout << "MergeSort: " <<  elapsed_secs<< endl;
+        ArrayRandomize(t);
+    // ArrayShow(t);
+
+        begin = clock();
+        QuickSort(t, 0, MAX-1);
+        end = clock();
+        elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;
+        cout << "---" << endl;
+        cout << "QuickSort: " <<  elapsed_secs<< endl;
+        ArrayRandomize(t);
+
+        t[0]=MAX;
+    //   ArrayShow(t);
+        begin = clock();
+        HeapSort(t);
+        end = clock();
+        elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;
+        cout << "---" << endl;
+        cout << "HeapSort: " << elapsed_secs<< endl;
+        
  //   ArrayShow(t);
 
         cout << endl;

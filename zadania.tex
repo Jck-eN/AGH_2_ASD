@@ -1,0 +1,120 @@
+\documentclass[11pt]{article}
+
+
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, bottom=2.00cm]{geometry}
+\usepackage{polski}
+\usepackage[utf8]{inputenc} 
+%opening
+\title{
+	\textbf{
+		\LARGE{Algorytmy i struktury danych}\linebreak \\
+		\large{Zadania obowiązkowe} \\
+		\normalsize{Informatyka WIEiT - 2018/2019 }} \\
+}
+\author{}
+\date{}
+\renewcommand{\thesection}{\arabic{section}.}
+
+\begin{document}
+
+\maketitle
+
+\section{Ćwiczenia - Sortowania proste}
+	Brak zadań obowiązkowych
+\section{Ćwiczenia - MergeSort}
+
+\begin{enumerate}
+	\item Implementacja algorytmu MergeSort dla sortowania list
+	
+	\item Proszę zaproponować/zaimplementować algorytm scalający k posortowanych tablic o łącznej długości n
+	w jedną posortowaną tablicę w czasie $O(n*log(k))$.
+	
+	\item Proszę zaproponować strukturę przechowującą liczby naturalne, w której operacje:
+	Insert i GetMedian mają złożoność $O(log(n))$.
+	Proszę zaimplementować w/w operacje.
+	
+	\item Proszę zaimplementować algorytm zliczający liczbę inwersji w tablicy
+	(Inwersja to para indeksów $i,j$ taka, że $ i<j $ oraz $T[i]>T[j] $)
+\end{enumerate}
+
+\section{Ćwiczenia - QuickSort}
+
+\begin{enumerate}
+	\item Proszę zaimplementować algorytm QuickSort do sortowania listy jednokierunkowej.
+	
+	\item Proszę zaimplementować algorytm, który w czasie liniowym sortuje tablicę A zawierającą n liczb ze zbioru $ 0,1, ... ,n^2-1 $.
+	
+	\item Mamy serię pojemników z wodą, połączonych (każdy z każdym) rurami.
+	Pojemniki maja kształty prostokątów (2d), rury nie maja objętości (powierzchni).
+	Każdy pojemnik opisany jest przez współrzędne lewego górnego rogu i prawego dolnego rogu.
+	Wiemy, ze do pojemników nalano A wody (oczywiście woda rurami spłynęła do najniższych pojemników).
+	Obliczyć ile pojemników zostało w pełni zalanych.
+	
+	\item Dany jest ciąg przedziałów domkniętych $ [a_{1}, b_{1}], . . . ,[a_{n}, b_{n}]$.
+	Proszę zaproponować algorytm, który znajduje taki przedział $[a_{t}, b_{t}]$,
+	w którym w całości zawiera się jak najwięcej innych przedziałów.
+\end{enumerate}
+
+\newpage
+\section{Ćwiczenia - Zastosowania sortowań}
+
+\begin{enumerate}
+	\item Dana jest posortowana tablica \texttt{int A[N]} oraz liczba $x$.
+	Napisać program, który stwierdza czy istnieją indeksy $i$ oraz $j$,
+	takie że $A[i]+A[j]=x$ (powinno działać w czasie $O(N)$).
+	
+	\item Zaimplementować algorytm, który dla tablicy \texttt{int A[N]} wyznacza
+	rekurencyjną medianę median (magiczne piątki).
+	
+	\item Mamy daną tablicę \texttt{A} z n liczbami. Proszę zaproponować algorytm
+	o złożoności $O(n)$, który stwierdza, czy w tablicy ponad połowa elementów
+	ma jednakową wartość.
+	
+	\item Proszę zaproponować algorytm sortujący ciąg słów o różnych długościach
+	w czasie proporcjonalnym do sumy długości tych słów.
+\end{enumerate}
+
+\section{Ćwiczenia - Struktury danych}
+
+\begin{enumerate}
+	\item Proszę zaimplementować dodawanie elementu do SkipListy.
+	
+	\item Proszę zaimplementować kolejkę przy użyciu dwóch stosów.
+	
+	
+\end{enumerate}
+
+\section{Ćwiczenia - Tablice z haszowaniem}
+
+\begin{enumerate}
+	
+	\item Proszę zaimplementować następujące operacje na tablicy z haszowaniem:
+	\begin{itemize}
+		\item[$-$] wstawianie
+		\item[$-$] usuwanie
+		\item[$-$] wyszukiwanie
+		\item[$-$] reorganizacja (usunięcie kluczy zaznaczonych do skasowania)
+	\end{itemize}
+	
+	\item Dana jest nieposortowana tablica \texttt{int A[N]} oraz liczba $x$.
+	Proszę napisać funkcję, która sprawdza na ile sposobów można przedstawić
+	$x$ jako sumę $A[i]+A[j]$ takiego że $i<j$.
+		
+\end{enumerate}
+
+\section{Ćwiczenia - Drzewa BST}
+
+\begin{enumerate}
+	
+	\item Proszę podać modyfikację drzewa BST, która pozwala na efektywne
+	wykonywanie następujących operacji:
+	\begin{enumerate}
+		\item znalezienie i-tego co do wielkości elementu w drzewie BST
+		\item wyznaczenie, którym co do wielkości w drzewie jest zadany węzeł
+	\end{enumerate}
+	Proszę zaimplementować obie operacje.
+	
+\end{enumerate}
+
+
+\end{document}

@@ -1,4 +1,4 @@
-Zestaw 2: (27-02-2019)
+Zestaw 2: (06-03-2019)
 
 1. Implementacja algorytmu MergeSort dla sortowania list
 
@@ -13,7 +13,7 @@ Proszę zaimplementować w/w operacje.
 (Inwersja to para indeksów i,j, taka że i<j i T[i]>T[j])
 
 --------
-Zestaw 3: (06-03-2019)
+Zestaw 3: (13-03-2019)
 
 1. Proszę zaimplementować algorytm QuickSort do sortowania listy jednokierunkowej.
 
@@ -30,7 +30,7 @@ Proszę zaproponować algorytm, który znajduje taki przedział [at, bt],
 w którym w całości zawiera się jak najwięcej innych przedziałów.
 
 --------
-Zestaw 4: (13-03-2019)
+Zestaw 4: (20-03-2019)
 
 1. Dana jest posortowana tablica int A[N] oraz liczba x.
 Napisac program, który stwierdza czy istnieją indeksy i oraz j,
@@ -47,7 +47,7 @@ ma jednakową wartość.
 w czasie proporcjonalnym do sumy długości tych słów?
 
 --------
-Zestaw 5: (20-03-2019)
+Zestaw 5: (27-03-2019)
 
 1. Proszę zaimplementować dodawanie elementu do skiplisty.
 
@@ -55,7 +55,7 @@ Zestaw 5: (20-03-2019)
 
 
 --------
-Zestaw 6: (27-03-2019)
+Zestaw 6: (03-04-2019)
 
 1. Proszę zaimplementować następujące operacje na tablicy z haszowaniem:
 - wstawianie
@@ -66,3 +66,13 @@ Zestaw 6: (27-03-2019)
 2. Dana jest nieposortowana tablica A[N] oraz liczba x.
 Proszę napisać funkcję, która sprawdza na ile sposobów można przedstawić
 x jako sumę A[i]+A[j] takiego że i<j.
+
+
+--------
+Zestaw 7: (10-04-2019)
+
+Proszę podać modyfikację drzewa BST, która pozwala na efektywne
+wykonywanie następujących operacji:
+1. znalezienie i-tego co do wielkości elementu w drzewie BST
+2. wyznaczenie, którym co do wielkości w drzewie jest zadany węzeł
+Proszę zaimplementować obie operacje.

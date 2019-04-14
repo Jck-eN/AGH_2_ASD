@@ -77,7 +77,7 @@ Data* ht_search(hashtable* ht, int k){
         if(ht->element[j].data->number==k) return (ht->element[j].data);
         else i++;
     }
-    while(ht->element[j].zajety || ht->element[j].usun || i<ht->size);
+    while(ht->element[j].zajety or ht->element[j].usun or i<ht->size);
     return NULL;
 }
 
@@ -96,7 +96,7 @@ void ht_remove(hashtable* ht, int k){
         }
         else i++;
     }
-    while(ht->element[j].zajety || ht->element[j].usun || i<ht->size);
+    while(ht->element[j].zajety or ht->element[j].usun or i<ht->size);
 }
 
 void ht_reorganize(hashtable* ht){

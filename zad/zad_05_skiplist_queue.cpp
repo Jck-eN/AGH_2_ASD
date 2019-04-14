@@ -111,7 +111,7 @@ struct TwoStacksQueue{
 };
 
 bool is_empty(TwoStacksQueue* q){
-    return is_stack_empty(q->Stack1) && is_stack_empty(q->Stack2);
+    return is_stack_empty(q->Stack1) and is_stack_empty(q->Stack2);
 }
 void push(TwoStacksQueue* q, int val){
     push_stack(q->Stack1, val);
