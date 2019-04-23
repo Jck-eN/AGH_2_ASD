@@ -75,4 +75,36 @@ Proszę podać modyfikację drzewa BST, która pozwala na efektywne
 wykonywanie następujących operacji:
 1. znalezienie i-tego co do wielkości elementu w drzewie BST
 2. wyznaczenie, którym co do wielkości w drzewie jest zadany węzeł
-Proszę zaimplementować obie operacje.
+Proszę zaimplementować obie operacje.\
+
+
+--------
+Zestaw 8: (17-04-2019)
+
+1. Zaimplementować funkcję, która koloruje węzły drzewa aby spełniało warunek drzewa RB,
+funkcja powinna zwracać informację czy udało się pokolorować drzewo.
+
+2. Udowodnić, że każde drzewo AVL jest drzewem RB.
+
+
+--------
+Zestaw 9: (24-04-2019)
+
+
+1. Dana jest tablica bool A[N][N]; Gracz początkowo znajduje się na (zadanej) pozycji(x, y),
+dla której zachodzi A[y][x] == true. Z danej pozycji wolno bezpośrednio przejść jedynie na pozycję,
+której dokładnie jedna współrzędna różni się o 1, oraz której wartość w tablicy A wynosi true.
+Proszę napisać funkcję obliczający do ilu różnych pozycji może dojść gracz startując z zadanej pozycji(x, y).
+
+2. Dana jest struktura węzła drzewa B-tree przechowującego unikalne klucze:
+struct node {
+int n; // liczba kluczy zawarta w węźle
+int key[N]; // tablica kluczy w węźle
+node* child[N+1] // wskaźniki do synów węzła
+bool leaf; // czy węzeł jest liściem
+};
+Proszę napisać funkcję bool is_b_tree(node* p); sprawdzającą czy
+wskaźnik p wskazuje na poprawne drzewo b-tree.
+
+
+

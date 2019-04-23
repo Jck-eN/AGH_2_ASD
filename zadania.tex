@@ -3,7 +3,8 @@
 
 \usepackage[left=2.00cm, right=2.00cm, top=2.00cm, bottom=2.00cm]{geometry}
 \usepackage{polski}
-\usepackage[utf8]{inputenc} 
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
 %opening
 \title{
 	\textbf{
@@ -16,6 +17,12 @@
 \renewcommand{\thesection}{\arabic{section}.}
 
 \begin{document}
+\lstset{language=C++,
+	texcl=true,
+	inputencoding=utf8,
+	extendedchars=\true,
+	}
+
 
 \maketitle
 
@@ -66,7 +73,7 @@
 	\item Zaimplementować algorytm, który dla tablicy \texttt{int A[N]} wyznacza
 	rekurencyjną medianę median (magiczne piątki).
 	
-	\item Mamy daną tablicę \texttt{A} z n liczbami. Proszę zaproponować algorytm
+	\item Mamy daną tablicę A z n liczbami. Proszę zaproponować algorytm
 	o złożoności $O(n)$, który stwierdza, czy w tablicy ponad połowa elementów
 	ma jednakową wartość.
 	
@@ -115,6 +122,40 @@
 	Proszę zaimplementować obie operacje.
 	
 \end{enumerate}
+\section{Ćwiczenia - Drzewa czerwono-czarne}
 
+\begin{enumerate}
+	
+	\item Zaimplementować funkcję, która koloruje węzły drzewa aby spełniało warunek drzewa RB,
+	funkcja powinna zwracać informację czy udało się pokolorować drzewo.
+	\item Udowodnić, że każde drzewo AVL jest drzewem RB.
+	
+\end{enumerate}
+\section{Ćwiczenia - Drzewa B-tree}
 
+\begin{enumerate}
+	
+	\item Dana jest tablica \texttt{bool A[N][N];} Gracz początkowo znajduje się na (zadanej) pozycji $(x, y)$,
+	dla której zachodzi \texttt{A[y][x] == true}. Z danej pozycji wolno bezpośrednio przejść jedynie na pozycję,
+	której dokładnie jedna współrzędna różni się o 1, oraz której wartość w tablicy $A$ wynosi \texttt{true}.
+	Proszę napisać funkcję obliczający do ilu różnych pozycji może dojść gracz startując z zadanej pozycji $(x,~y)$.
+	
+	\item Dana jest struktura węzła drzewa B-tree przechowującego unikalne klucze: \newline
+\begin{lstlisting}
+	struct node {
+		int n;			// liczba kluczy zawarta w węźle
+		int key[N];		// tablica kluczy w węźle
+		node* child[N+1];	// wskaźniki do synów węzła
+		bool leaf;		// czy węzeł jest liściem
+	};
+\end{lstlisting}
+
+	Proszę napisać funkcję \texttt{bool is\_b\_tree(node* p);} sprawdzającą czy
+	wskaźnik $p$ wskazuje na poprawne drzewo B-tree.
+	
+	
+\end{enumerate}
+\section{Ćwiczenia - Kolokwium nr 2}
+	Brak zadań obowiązkowych
+	
 \end{document}

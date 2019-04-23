@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2019.2.23)  8 APR 2019 15:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2019.2.23)  23 APR 2019 19:28
 entering extended mode
 **./zadania.tex
 (zadania.tex
@@ -416,23 +416,48 @@ Now handling font encoding OT4 ...
    defining Unicode char U+2026 (decimal 8230)
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
-)) (zadania.aux)
+))
+("D:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.sty"
+\lst@mode=\count90
+\lst@gtempboxa=\box26
+\lst@token=\toks18
+\lst@length=\count91
+\lst@currlwidth=\dimen111
+\lst@column=\count92
+\lst@pos=\count93
+\lst@lostspace=\dimen112
+\lst@width=\dimen113
+\lst@newlines=\count94
+\lst@lineno=\count95
+\lst@maxwidth=\dimen114
+
+("D:\Program Files\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count96
+\lst@skipnumbers=\count97
+\lst@framebox=\box27
+)
+("D:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.cfg"
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+ (zadania.aux)
 \openout1 = `zadania.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -468,60 +493,89 @@ LaTeX Font Info:    ... okay on input line 18.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Try loading font information for OML+plm on input line 20.
+\c@lstlisting=\count98
+("D:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+("D:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+("D:\Program Files\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+)
+LaTeX Font Info:    Try loading font information for OML+plm on input line 27.
+
 ("D:\Program Files\MiKTeX 2.9\tex\latex\polski\omlplm.fd"
 File: omlplm.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-LaTeX Font Info:    Try loading font information for OMS+plsy on input line 20.
+LaTeX Font Info:    Try loading font information for OMS+plsy on input line 27.
 
 
 ("D:\Program Files\MiKTeX 2.9\tex\latex\polski\omsplsy.fd"
 File: omsplsy.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-LaTeX Font Info:    Try loading font information for OMX+plex on input line 20.
+LaTeX Font Info:    Try loading font information for OMX+plex on input line 27.
 
 
 ("D:\Program Files\MiKTeX 2.9\tex\latex\polski\omxplex.fd"
 File: omxplex.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <12> on input line 20.
+(Font)              <12> on input line 27.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <8> on input line 20.
+(Font)              <8> on input line 27.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <6> on input line 20.
+(Font)              <6> on input line 27.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <10.95> on input line 30.
+(Font)              <10.95> on input line 37.
  [1
 
 {C:/Users/jacek/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OT4+cmtt on input line 62.
+LaTeX Font Info:    Try loading font information for OT4+cmtt on input line 69.
 
 
 ("D:\Program Files\MiKTeX 2.9\tex\latex\polski\ot4cmtt.fd"
 File: ot4cmtt.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
-) [2] (zadania.aux) ) 
+) [2]
+Underfull \hbox (badness 10000) in paragraph at lines 143--144
+
+ []
+
+("D:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
+File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
+)
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 145.
+
+
+("D:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 145.
+ [3] (zadania.aux) ) 
 Here is how much of TeX's memory you used:
- 1299 strings out of 493308
- 16147 string characters out of 3138768
- 77436 words of memory out of 3000000
- 4859 multiletter control sequences out of 15000+200000
- 12092 words of font info for 35 fonts, out of 3000000 for 9000
+ 2849 strings out of 493308
+ 38086 string characters out of 3138768
+ 122439 words of memory out of 3000000
+ 6383 multiletter control sequences out of 15000+200000
+ 12885 words of font info for 37 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 23i,4n,24p,163b,194s stack positions out of 5000i,500n,10000p,200000b,50000s
-{D:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/pltt.enc}{
-D:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/plmi.enc}{D:/Program Files/MiKTe
-X 2.9/fonts/enc/dvips/pl/plrm.enc}{D:/Program Files/MiKTeX 2.9/fonts/enc/dvips/
-pl/plms.enc}<D:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plbx10.pfb><D:/P
-rogram Files/MiKTeX 2.9/fonts/type1/public/pl/plbx12.pfb><D:/Program Files/MiKT
-eX 2.9/fonts/type1/public/pl/plmi10.pfb><D:/Program Files/MiKTeX 2.9/fonts/type
-1/public/pl/plmi8.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plr10.
-pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plr8.pfb><D:/Program Fil
-es/MiKTeX 2.9/fonts/type1/public/pl/plsy10.pfb><D:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/pl/pltt10.pfb>
-Output written on zadania.pdf (2 pages, 58685 bytes).
+ 33i,4n,58p,163b,1241s stack positions out of 5000i,500n,10000p,200000b,50000s
+{D:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/plit.enc}{D
+:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/pltt.enc}{D:/Program Files/MiKTeX
+ 2.9/fonts/enc/dvips/pl/plmi.enc}{D:/Program Files/MiKTeX 2.9/fonts/enc/dvips/p
+l/plrm.enc}{D:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/plms.enc}<D:/Program
+ Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Program Files/M
+iKTeX 2.9/fonts/type1/public/pl/plbx10.pfb><D:/Program Files/MiKTeX 2.9/fonts/t
+ype1/public/pl/plbx12.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/pl
+mi10.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plmi8.pfb><D:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/pl/plr10.pfb><D:/Program Files/MiKTeX 2.
+9/fonts/type1/public/pl/plr8.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/publi
+c/pl/plsy10.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plti10.pfb><
+D:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/pltt10.pfb>
+Output written on zadania.pdf (3 pages, 84840 bytes).
 PDF statistics:
- 45 PDF objects out of 1000 (max. 8388607)
+ 57 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
