@@ -7,6 +7,7 @@
 #include <conio.h>
 #include <random>
 #include <climits>
+#include <algorithm>
 
 using namespace std;
 
@@ -216,7 +217,24 @@ void QuickSort_int(int t[], int p, int r)
 void QuickSort(int t[], int MAX){
     QuickSort_int(t, 0, MAX-1);
 }
+// Qsort - STL
+//--------------------
+int porownaj_int( const void* a, const void* b ) {  // funkcja porównująca
+    int* arg1 = (int*) a;
+    int* arg2 = (int*) b;
+    if( *arg1 < *arg2 ) return -1;
+    else if( *arg1 == *arg2 ) return 0;
+    else return 1;
+}
+void QSort_STL(int t[], int MAX){
+    qsort(t, MAX, sizeof(int), porownaj_int);
+}
 
+// Sort - STL
+//--------------------
+void Sort_STL(int t[], int MAX){
+    sort(t, t+MAX);
+}
 
 //RadixSort
 //---------------------
@@ -228,7 +246,6 @@ int getMax(int arr[], int n)
             mx = arr[i]; 
     return mx; 
 } 
-
 
 
 void CountingSort(int t[], int N, int exp){
@@ -251,6 +268,66 @@ void RadixSort(int t[], int MAX){
     for (int exp = 1; m/exp > 0; exp *= 10) 
     CountingSort(t, MAX, exp); 
 }
+// Sortowanie na drzewach BST
+struct Bst{
+    Bst* left;
+    Bst* right;
+    Bst* parent;
+    int val;
+};
+
+Bst* CreateBST(int value){
+    Bst* p = new Bst;
+    p->left=p->right=p->parent=nullptr;
+    p->val=value;
+    return p;
+}
+
+void InsertInBST (Bst* root, Bst* to_insert) {
+    if(to_insert->val<root->val){
+        if(root->left!=NULL){
+            InsertInBST(root->left, to_insert);
+        }
+        else{
+            root->left=to_insert;
+            to_insert->parent=root;
+        }
+    }
+    else{
+        if(root->right!=NULL){
+            InsertInBST(root->right, to_insert);
+        }
+        else{
+            root->right=to_insert;
+            to_insert->parent=root;
+        }
+    }
+}
+
+void SaveBSTinArray(Bst* root, int &idx, int* t) {
+    if(root->left!=NULL) SaveBSTinArray(root->left, idx, t);
+    t[idx]=root->val;
+    idx++;
+    if(root->right!=NULL) SaveBSTinArray(root->right, idx, t);
+}
+
+void DeleteBTS(Bst* root) {
+    if(root->left!=NULL) DeleteBTS(root->left);
+    if(root->right!=NULL) DeleteBTS(root->right);
+    delete root;
+}
+
+void BSTSort(int t[], int MAX)
+{
+    Bst* root = CreateBST(t[0]);
+    for(int i=1; i<MAX; i++){
+        InsertInBST(root, CreateBST(t[i]));
+    }
+    int idx=0;
+    SaveBSTinArray(root, idx, t);
+    DeleteBTS(root);
+    return;
+}
 
 //----------------------------------------------------------
 double Sort(void sort_type(int*, int), int t[], int MAX){
@@ -270,11 +347,17 @@ double Sort(void sort_type(int*, int), int t[], int MAX){
     return ((double)(end-begin)/CLOCKS_PER_SEC);
 }
 
-
+int* copy_array(int* t, int MAX){
+    int* tmp = new int[MAX];
+    for(int i=0; i<MAX; i++){
+        tmp[i]=t[i];
+    }
+    return tmp;
+}
 
 void naglowek(){
     cout << "-------------------------------------------------------------------------" << endl;
-    cout << "|\t\t\t Porownanie czasow sortowan\t\tv1.0\t|"  << endl;
+    cout << "|\t\t\t Porownanie czasow sortowan\t\tv1.1\t|"  << endl;
     cout << "-------------------------------------------------------------------------" << endl;
     cout << "|\t\t\t\t\t\tAutor: Jacek Nitychoruk\t|" << endl;
     cout << "-------------------------------------------------------------------------" << endl;
@@ -286,23 +369,23 @@ void menu(){
     cout << "1. Wszystkie sortowania" << endl;
     cout << "2. Proste sortowania" << endl;
     cout << "3. Szybkie sortowania" << endl;
-    cout << "4. Szybkie + Radix" << endl;
+    cout << "4. Szybkie + Radix + BST" << endl;
     cout << endl;    
     cout << "Skokowe pomiary:"<< endl;    
     cout << "------------------" << endl;
     cout << "5. Wszystkie sortowania" << endl;
     cout << "6. Proste sortowania" << endl;
     cout << "7. Szybkie sortowania" << endl;
-    cout << "8. Szybkie + Radix" << endl;
+    cout << "8. Szybkie + Radix + BST" << endl;
     cout << endl;
     cout << "0. Wyjscie" << endl;
     cout << endl;
 }
 
 void sortowania(int pocz, int koniec, int MAX, int powt, int skok){
-    string sorts[7]={"Insertion:", "Selection:", "Bubble:\t", "Merge:\t", "Heap:\t", "Quick:\t", "Radix"};
+    string sorts[10]={"Insertion:", "Selection:", "Bubble:\t", "Merge:\t", "Heap:\t", "Quick:\t", "QSort_STL:", "Sort_STL:", "Radix:\t", "BST:"};
 
-    void (*sort_ptr[7])(int t[], int MAX)={InsertionSort, SelectionSort, BubbleSort, MergeSort, HeapSort, QuickSort, RadixSort};
+    void (*sort_ptr[10])(int t[], int MAX)={InsertionSort, SelectionSort, BubbleSort, MergeSort, HeapSort, QuickSort, QSort_STL, Sort_STL, RadixSort, BSTSort};
 
     cout << "MAX:\t";
     if(MAX>=1000000) cout << "\t";
@@ -310,20 +393,21 @@ void sortowania(int pocz, int koniec, int MAX, int powt, int skok){
         cout << sorts[i] << "\t";
     }
     cout << endl;
-    cout << "--------------------------------------------------------------------------------------------------------------" << endl;
+    cout << "-------------------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
     for(int i=0; i<powt; i++){
         cout << MAX << ":\t";
+        int *arr = new int[MAX];
+        ArrayRandomize(arr, MAX);
         for(int i=pocz; i<koniec;i++){   
 
-            int *t = new int[MAX];
-            ArrayRandomize(t, MAX);
+            int* t = copy_array(arr, MAX);
             
             cout <<fixed<<setprecision(3)<<Sort(sort_ptr[i], t, MAX) << "\t\t";
-
             delete[] t;
         }
         MAX+=skok;
         cout << endl;
+        delete[] arr;
     }
     cout << endl;
     cout << "Nacisnij klawisz, aby wrocic do menu.";
@@ -336,7 +420,7 @@ int main()
     while(true){
         int MAX=-1;
         int komenda =-1;
-        int poczatek=1, koniec=7;
+        int poczatek=1, koniec=10;
         bool skokowo=false;
         system("cls");
         naglowek();
@@ -348,7 +432,7 @@ int main()
             case 2: koniec=3;
                     break;
             case 3: poczatek=4;
-                    koniec=6;
+                    koniec=8;
                     break;
             case 4: poczatek=4;
                     break;
@@ -360,7 +444,7 @@ int main()
                     break;
             case 7: skokowo=true; 
                     poczatek=4;
-                    koniec=6;
+                    koniec=8;
                     break;            
             case 8: skokowo=true; 
                     poczatek=4;

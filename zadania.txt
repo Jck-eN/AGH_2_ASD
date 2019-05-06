@@ -107,4 +107,15 @@ Proszę napisać funkcję bool is_b_tree(node* p); sprawdzającą czy
 wskaźnik p wskazuje na poprawne drzewo b-tree.
 
 
+--------
+Zestaw 10: (08-05-2019)
 
+1. Proszę zaimplementować następujące algorytmy:
+- Sprawdzanie czy graf jest dwudzielny
+- Policzyć liczbę spójnych składowych w grafie
+Graf jest reprezentowany jako macierz sąsiedztwa albo listy sąsiadów albo listy krawędzi.
+
+2. Mówimy, że wierzchołek t w grafie skierowanym jest ujściem, jeśli:
+- z każdego innego wierzchołka v istnieje krawędź z v do t,
+- nie istnieje żadna krawędź wychodząca z t.
+Podać algorytm znajdujący ujście (jeśli istnieje) przy macierzowej reprezentacji grafu.
