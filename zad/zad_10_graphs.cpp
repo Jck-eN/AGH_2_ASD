@@ -9,6 +9,36 @@ const int n = 100;
 - Policzyć liczbę spójnych składowych w grafie
 Graf jest reprezentowany jako macierz sąsiedztwa albo listy sąsiadów albo listy krawędzi.*/
 
+/*
+0. sposoby przechodzenia po sąsiadach w grafie: "for(v in adj[u])"
+
+0a. Macierz incydencji
+for(int i=0; i<n; i++){
+    if(graph[u][i]){
+        ... Code here ...
+    }
+}
+
+0b. Listy sąsiadów
+
+node* v = List[u];
+while(v!=nullptr){
+    ... Code here ...
+    v=v->next;
+}
+
+0c. Listy krawędzi
+
+edge* head;
+while(head!=nullptr){
+    if(head.first==u){
+        ... Code here ...
+    }
+    head=head->next;
+}
+*/
+
+//1a Czy jest dwudzielny
 
 bool is_bipartite(int Graph[n][n], int start)
 {
@@ -19,13 +49,14 @@ bool is_bipartite(int Graph[n][n], int start)
     }
     queue<int> Q;
     Q.push(start);
+    side[start]=1;
     while(!Q.empty)
     {
         int u=Q.front;
         Q.pop;
         for(int i=0; i<n; i++)
         {
-            if(Graph[u][i] and u!=i)
+            if(Graph[u][i])
             {
                 if(side[i]==0){
                     side[i]=-side[u];
@@ -77,6 +108,12 @@ int Connected_components(int Graph[n][n]){
 }
 
 //Znajdowanie ujścia w grafie (universal sink)
+/*
+2. Mówimy, że wierzchołek t w grafie skierowanym jest ujściem, jeśli:
+- z każdego innego wierzchołka v istnieje krawędź z v do t,
+- nie istnieje żadna krawędź wychodząca z t.
+Podać algorytm znajdujący ujście (jeśli istnieje) przy macierzowej reprezentacji grafu.
+*/
 
 bool is_sink(bool Graph[n][n], int k){
     for(int i=0;i<n; i++){

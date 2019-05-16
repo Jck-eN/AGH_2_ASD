@@ -383,7 +383,7 @@ void menu(){
 }
 
 void sortowania(int pocz, int koniec, int MAX, int powt, int skok){
-    string sorts[10]={"Insertion:", "Selection:", "Bubble:\t", "Merge:\t", "Heap:\t", "Quick:\t", "QSort_STL:", "Sort_STL:", "Radix:\t", "BST:"};
+    string sorts[10]={"Insertion:", "Selection:", "Bubble:\t", "Merge:\t", "Heap:\t", "Quick:\t", "QSort_C:", "Sort_STL:", "Radix:\t", "BST:"};
 
     void (*sort_ptr[10])(int t[], int MAX)={InsertionSort, SelectionSort, BubbleSort, MergeSort, HeapSort, QuickSort, QSort_STL, Sort_STL, RadixSort, BSTSort};
 

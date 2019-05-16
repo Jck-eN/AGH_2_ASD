@@ -63,7 +63,7 @@ void BFS(int Graph[n][n], int start){
         int u=Q.front;
         Q.pop;
         for(int i=0; i<n; i++){
-            if(Graph[u][i] and u!=i and color[i]==white){
+            if(Graph[u][i] and color[i]==white){
                 color[i]=grey;
                 d[i]=d[u]+1;
                 parent[i]=u;
@@ -78,40 +78,4 @@ void BFS(int Graph[n][n], int start){
     delete[] parent;
     delete[] color;
     delete[] d;
-}
-
-//--------------------------------------
-//Przeszukiwanie grafu wgłąb - DFS
-//np. macierz sąsiedztwa
-
-
-void DFS(int Graph[n][n]){
-    int *parent = new int[n];
-    Color* color = new Color[n];
-    int *d = new int[n];
-
-    for(int i=0; i<n; i++){
-        color[i] = white;
-        parent[i]=-1;
-        d[i]=INT_MAX;
-    }
-    int path=0;
-    for(int i=0; i<n; i++){
-        if(color[i]==white) DFS_Visit(Graph, i, parent, color, d, path);
-    }
-    delete[] parent;
-    delete[] color;
-    delete[] d;
-}
-void DFS_Visit(int Graph[n][n], int u, int* parent, Color* color, int* d, int path){
-    color[u]=grey;
-    d[u]=path=path+1;
-    for(int i=0; i<n; i++){
-        if(Graph[u][i] and u!=i and color[i]==white){
-            parent[i]=u;
-            DFS_Visit(Graph, i, parent, color, d, path);
-        }
-    }
-    color[u]=black;
-
 }
