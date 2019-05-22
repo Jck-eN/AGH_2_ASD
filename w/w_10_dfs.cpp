@@ -2,7 +2,7 @@
 #include <queue>
 #include <climits>
 using namespace std;
-
+#define and &&
 
 //Implementacja grafów:
 

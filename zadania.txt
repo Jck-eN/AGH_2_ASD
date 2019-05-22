@@ -119,3 +119,14 @@ Graf jest reprezentowany jako macierz sąsiedztwa albo listy sąsiadów albo lis
 - z każdego innego wierzchołka v istnieje krawędź z v do t,
 - nie istnieje żadna krawędź wychodząca z t.
 Podać algorytm znajdujący ujście (jeśli istnieje) przy macierzowej reprezentacji grafu.
+
+--------
+Zestaw 12: (22-05-2019)
+
+1. Sciezka Hamiltona przechodzi przez wszystkie wierzchołki w grafie, przez kazdy dokładnie jeden raz.
+Prosze zaimplementowac algorytm, który stwierdzi czy istnieje sciezka Hamiltona w acyklicznym
+grafie skierowanym.
+2. Cykl Hamiltona o minimalnej sumie wag krawedzi nazywamy droga komiwojazera. Dane sa współrzedne
+N punktów na płaszczyznie. Prosze zaimplementowac funkcje obliczajaca dolne ograniczenie
+drogi komiwojazera.
+Wskazówka: Jaki zwiazek ma długosc drogi komiwojazera z długoscia minimalnego drzewa rozpinajacego?
