@@ -55,9 +55,9 @@ void heapify(int t[], int i)
     int l = left(i);
     int r = right(i);
     int max = i;
-    if (l <= size and t[l] > t[max])
+    if (l <= size && t[l] > t[max])
         max = l;
-    if (r <= size and t[r] > t[max])
+    if (r <= size && t[r] > t[max])
         max = r;
     if (max != i){
         swap(t[i],t[max]);

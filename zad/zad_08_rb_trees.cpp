@@ -24,9 +24,9 @@ inline int height(node* a){return a->height;}
 
 
 void color_children(node* a, node* b){
-  if (height(a) < height(b) or height(a)%2==1) color_black(a);
+  if (height(a) < height(b) || height(a)%2==1) color_black(a);
   else color_red(a);
-  if (height(b) < height(a) or height(b)%2==1) color_black(b);
+  if (height(b) < height(a) || height(b)%2==1) color_black(b);
   else color_red(b);
 }
 
@@ -50,7 +50,7 @@ int color_node(node* n){
     if (n->parent == nullptr){
         n->color = black;
         n->black_quota = n->height / 2; // rounded up.
-            // black-quota could start at any value between n.height/2 and n.min-height
+            // black-quota could start at any value between n.height/2 && n.min-height
     }
     else if (n->parent->color==red){
         n->color = black;

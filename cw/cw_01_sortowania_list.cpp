@@ -5,7 +5,7 @@ using namespace std;
 void BubbleSort(int t[], int n)
 {
     bool action = true;
-    for (int i = 1; i < n and action == true; i++)
+    for (int i = 1; i < n && action == true; i++)
     {
         action = false;
         for (int j = i; j < n - 1; j++)
@@ -41,7 +41,7 @@ void InsertionSort(int t[], int n)
     {
         int x = t[i]; // x - wartość porównywana
         int j = i - 1;
-        while (t[j] > x and j >= 0)
+        while (t[j] > x && j >= 0)
         {
             t[j + 1] = t[j];
             j--;
@@ -63,7 +63,7 @@ struct node
 void insert_wart(node *head, node *n)
 {
     node *p = head;
-    while (p->next != nullptr and p->next->val < n->val)
+    while (p->next != nullptr && p->next->val < n->val)
     {
         p = p->next;
     }
@@ -85,7 +85,7 @@ node *insert(node *head, node *n)
         return n;
     }
     node *p = head;
-    while (p->next != nullptr and p->next->val < n->val)
+    while (p->next != nullptr && p->next->val < n->val)
     {
         p = p->next;
     }

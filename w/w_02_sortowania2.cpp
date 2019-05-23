@@ -4,7 +4,7 @@ void swap(int &a, int &b);
 void Merge(int tab[], int p, int mid, int k){
     int left=p, right=mid+1, i=0;
     int *tmp = new int[k-p+1];
-    while(left<=mid and right <= k){
+    while(left<=mid && right <= k){
         tmp[i++]=(tab[left] <= tab[right] ? tab[left++] : tab[right++]);
     }
     while(left<=mid){

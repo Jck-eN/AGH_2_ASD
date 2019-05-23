@@ -21,7 +21,7 @@ void InsertionSort(int t[])
     {
         int x = t[i]; // x - wartość porównywana
         int j = i - 1;
-        while (t[j] > x and j >= 0)
+        while (t[j] > x && j >= 0)
         {
             t[j + 1] = t[j];
             j--;

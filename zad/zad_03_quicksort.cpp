@@ -161,12 +161,12 @@ int FullContainers(Container container[], int n, int A)
     bool min_def = false, max_def = false;
     for (int i = 0; i < n; i++)
     {
-        if (min_def == false or min > container[i].r_y)
+        if (min_def == false || min > container[i].r_y)
         {
             min_def = true;
             min = container[i].r_y;
         }
-        if (min_def == false or min > container[i].l_y)
+        if (min_def == false || min > container[i].l_y)
         {
             max_def = true;
             max = container[i].l_y;

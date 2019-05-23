@@ -103,7 +103,7 @@ bool is_b_tree_int(node* p, int& val, int& leaves_lvl, int lvl, bool is_root){
 	}
 	else{
 		
-		if(p->n*2<N and is_root==false) return false; //middle nodes must have at least N/2 values
+		if(p->n*2<N && is_root==false) return false; //middle nodes must have at least N/2 values
 
 		for(i=0; i<p->n; i++){
 			if (p->child[i]!=nullptr && is_b_tree_int(p->child[i],val, leaves_lvl, lvl+1, false)==false) return false;

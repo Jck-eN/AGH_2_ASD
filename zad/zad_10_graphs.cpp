@@ -85,7 +85,7 @@ bool is_bipartite(int Graph[n][n], int start)
 void Connected(int Graph[n][n], bool* visited, int v){
     visited[v]=true;
     for(int i=0; i<n; i++){
-        if(Graph[v][i] and !(visited[v])){
+        if(Graph[v][i] && !(visited[v])){
             Connected(Graph, visited, i);
         }
     }
@@ -120,14 +120,14 @@ bool is_sink(bool Graph[n][n], int k){
         if(Graph[k][i]) return false;
     }    
     for(int i=0;i<n; i++){
-        if(!Graph[i][k] and i!=k) return false;
+        if(!Graph[i][k] && i!=k) return false;
     }
     return true;
 }
 
 int has_sink(bool Graph[n][n]){
     int i=0, j=0;
-    while(i<n and j<n){
+    while(i<n && j<n){
         if(Graph[i][j]==1) i++;
         else j++;
     }

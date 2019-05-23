@@ -50,7 +50,7 @@ void InsertionSort(int t[], int MAX)
     {
         int x = t[i]; // x - wartość porównywana
         int j = i - 1;
-        while (t[j] > x and j >= 0)
+        while (t[j] > x && j >= 0)
         {
             t[j + 1] = t[j];
             j--;
@@ -94,7 +94,7 @@ void Merge(int tab[], int p, int mid, int k)
 {
     int left = p, right = mid + 1, i = 0;
     int *tmp = new int[k - p + 1];
-    while (left <= mid and right <= k)
+    while (left <= mid && right <= k)
     {
         tmp[i++] = (tab[left] <= tab[right] ? tab[left++] : tab[right++]);
     }
@@ -148,9 +148,9 @@ void heapify(int t[], int i)
     int l = left(i);
     int r = right(i);
     int max = i;
-    if (l <= t[0] and t[l] > t[max])
+    if (l <= t[0] && t[l] > t[max])
         max = l;
-    if (r <= t[0] and t[r] > t[max])
+    if (r <= t[0] && t[r] > t[max])
         max = r;
     if (max != i)
     {

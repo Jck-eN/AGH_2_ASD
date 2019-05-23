@@ -63,7 +63,7 @@ void BFS(int Graph[n][n], int start){
         int u=Q.front;
         Q.pop;
         for(int i=0; i<n; i++){
-            if(Graph[u][i] and color[i]==white){
+            if(Graph[u][i] && color[i]==white){
                 color[i]=grey;
                 d[i]=d[u]+1;
                 parent[i]=u;

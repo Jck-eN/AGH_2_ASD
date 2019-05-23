@@ -15,8 +15,10 @@ grafie skierowanym.
 
 void Topo_DFS_Visit(int Graph[n][n], int u, bool* visited, int* sorted, int& idx){
     visited[u]=true;
-    for(int i=0; i<n; i++){
-        if(Graph[u][i] && u!=i && visited[i]==false){
+    for(int i=0; i<n; i++)
+    {
+        if(Graph[u][i] && u!=i && visited[i]==false)
+        {
             Topo_DFS_Visit(Graph, i, visited, sorted, idx);
         }
     }
@@ -28,11 +30,15 @@ bool TopoSort_DFS(int Graph[n][n]){
     int sorted[n] = {-1};
     int idx=n-1;
     bool visited[n] = {false};
-    for(int i=0; i<n; i++){
-        if(!visited[i]) Topo_DFS_Visit(Graph, i, visited, sorted, idx);
+    for(int i=0; i<n; i++)
+    {
+        if(!visited[i]) 
+            Topo_DFS_Visit(Graph, i, visited, sorted, idx);
     }
-    for(int i=0; i<n-1; i++){
-        if(Graph[sorted[i]][sorted[i+1]]==0) return false;
+    for(int i=0; i<n-1; i++)
+    {
+        if(Graph[sorted[i]][sorted[i+1]]==0)
+            return false;
     }
     return true;
 }
@@ -129,11 +135,11 @@ int KruskalSize(int Graph[n][n]){ //Główna funkcja
 
 int main(){
     int Graph[n][n]={
-        {0,1,0,0,0},
-        {0,0,1,1,0},
-        {0,0,0,1,0},
-        {0,0,0,0,1},
+        {0,1,1,0,0},
+        {0,0,1,0,0},
         {0,0,0,0,0},
+        {1,0,0,0,0},
+        {0,1,0,1,0},
     };
     cout <<TopoSort_DFS(Graph);
     return 0;

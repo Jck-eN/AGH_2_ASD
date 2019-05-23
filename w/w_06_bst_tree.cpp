@@ -14,7 +14,7 @@ struct node{
 };
 
 node* find(node* p, int k){
-    while(p!=NULL and p->key != k){
+    while(p!=NULL && p->key != k){
         if(k< p->key) p=p->left;
         else p=p->right;
     }
@@ -22,7 +22,7 @@ node* find(node* p, int k){
 }
 
 node* find_rec(node* p, int k){
-    if(p==NULL or p->key == k) return p;
+    if(p==NULL || p->key == k) return p;
     if(k<p->key) return find_rec(p->left, k);
     return find_rec(p->right, k);
 }
@@ -55,7 +55,7 @@ node* max(node* p){
 node* nastepnik(node* p){
     if(p->right!=NULL) return min(p->right);
     node* q=p->parent;
-    while(q!=NULL and q->right==p){
+    while(q!=NULL && q->right==p){
         p=q;
         q=q->parent;
     }

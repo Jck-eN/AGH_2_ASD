@@ -11,7 +11,7 @@ struct node
 node *odetnij(node *head)
 {
     node *p = head;
-    while (p->next != nullptr and p->next->val >= p->val)
+    while (p->next != nullptr && p->next->val >= p->val)
         p = p->next;
     node *q = p->next;
     if (q != nullptr)
@@ -24,7 +24,7 @@ node *MergeLists(node *l1, node *l2)
 {
     node *head = NULL;
     node *i = head;
-    while (l1 != NULL and l2 != NULL)
+    while (l1 != NULL && l2 != NULL)
     {
         if (l1->val > l2->val)
         {

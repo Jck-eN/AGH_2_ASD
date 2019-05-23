@@ -38,7 +38,7 @@ const int n=10;
 const int m=15;
 
 void can_sail(bool access[n][m], int A[n][m], int x, int y, int &T){
-    if (x>=0 and y>=0 and x<n and y < n and access[x][y]==false and A[x][y]>T){
+    if (x>=0 && y>=0 && x<n && y < n && access[x][y]==false && A[x][y]>T){
         access[x][y]=true;
         can_sail(access, A, x+1, y, T);
         can_sail(access, A, x-1, y, T);

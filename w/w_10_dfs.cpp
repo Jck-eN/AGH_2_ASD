@@ -2,7 +2,7 @@
 #include <queue>
 #include <climits>
 using namespace std;
-#define and &&
+#define && &&
 
 //Implementacja grafów:
 
@@ -73,7 +73,7 @@ void DFS_Visit(int Graph[n][n], int u, int* parent, Color* color, int* d, int* t
     time++;
     d[u]=time;
     for(int i=0; i<n; i++){
-        if(Graph[u][i] and u!=i and color[i]==white){
+        if(Graph[u][i] && u!=i && color[i]==white){
             parent[i]=u;
             DFS_Visit(Graph, i, parent, color, d, t, time);
         }
@@ -110,7 +110,7 @@ Topo_node* TopoSort_DFS(int Graph[n][n]){
 void Topo_DFS_Visit(int Graph[n][n], int u, Color* color, Topo_node* &res){
     color[u]=grey;
     for(int i=0; i<n; i++){
-        if(Graph[u][i] and u!=i and color[i]==white){
+        if(Graph[u][i] && u!=i && color[i]==white){
             Topo_DFS_Visit(Graph, i, color, res);
         }
     }
@@ -148,7 +148,7 @@ Euler_node* Euler(int Graph[n][n]){
 void Euler_DFS_Visit(int Graph[n][n], int u, Color* color, Euler_node* &res){
     color[u]=grey;
     for(int i=0; i<n; i++){
-        if(Graph[u][i] and u!=i and color[i]==white){
+        if(Graph[u][i] && u!=i && color[i]==white){
             Graph[u][i] = 0;                        //usuń przetworzone krawędzie
             Euler_DFS_Visit(Graph, i, color, res);
         }
@@ -200,7 +200,7 @@ int SCC_DFS_next(int Graph[n][n], int t[n]){
 void SCC_DFS_Visit_next(int Graph[n][n], int u, Color* color, int t[n]){
     color[u]=grey;
     for(int i=0; i<n; i++){
-        if(Graph[u][t[i]] and u!=t[i] and color[t[i]]==white){
+        if(Graph[u][t[i]] && u!=t[i] && color[t[i]]==white){
             SCC_DFS_Visit_next(Graph, t[i], color, t);
         }
     }
@@ -225,7 +225,7 @@ void SCC_DFS_Visit(int Graph[n][n], int u, Color* color, int* t, int &time){
     color[u]=grey;
     time++;
     for(int i=0; i<n; i++){
-        if(Graph[u][i] and u!=i and color[i]==white){
+        if(Graph[u][i] && u!=i && color[i]==white){
             SCC_DFS_Visit(Graph, i, color, t, time);
         }
     }

@@ -17,7 +17,7 @@ int Merge(int tab[], int p, int mid, int k)
 {
     int left = p, right = mid + 1, i = 0, inv_count = 0;
     int *tmp = new int[k - p + 1];
-    while (left <= mid and right <= k)
+    while (left <= mid && right <= k)
     {
         if (tab[left] <= tab[right])
         {
@@ -73,7 +73,7 @@ node *MergeLists(node *first, node *second)
 {
     node *merged = new node;
     node *tmp = merged;
-    while (first != nullptr and second != nullptr)
+    while (first != nullptr && second != nullptr)
     {
         if (first->val <= second->val)
         {
@@ -162,7 +162,7 @@ void insert_in_max_heap(int t[], int val)
     t[0]++;
     int i = t[0];
     t[i] = val;
-    while (i > 1 and t[parent(i)] > t[i])
+    while (i > 1 && t[parent(i)] > t[i])
     {
         swap(t[parent(i)], t[i]);
         i = parent(i);
@@ -173,7 +173,7 @@ void insert_in_min_heap(int t[], int val)
     t[0]++;
     int i = t[0];
     t[i] = val;
-    while (i > 1 and t[parent(i)] < t[i])
+    while (i > 1 && t[parent(i)] < t[i])
     {
         swap(t[parent(i)], t[i]);
         i = parent(i);

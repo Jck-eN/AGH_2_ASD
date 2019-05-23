@@ -25,7 +25,7 @@ SkipList merge(SkipList A, SkipList B){
         tmp_c=C.first;
         tmp_a=A.first->next[i];
         tmp_b=B.first->next[i];
-        while(tmp_a->value!=INF and tmp_b->value!=INF){
+        while(tmp_a->value!=INF && tmp_b->value!=INF){
             if(tmp_a->value<tmp_b->value){
                 tmp_c->next[i]=tmp_a;
                 tmp_c=tmp_c->next[i];
@@ -108,7 +108,7 @@ int smallestGroup(Cyclist cyclist[], int n){
     int mingroup= n+10;
     int counter;
     for(int i=0; i<2*n; i++){
-        if(ht.c[i].id!=-1 and ht.c[i].prev==-1){
+        if(ht.c[i].id!=-1 && ht.c[i].prev==-1){
             counter=0;
             int tmp=i;
             while(ht.c[tmp].next!=-1){

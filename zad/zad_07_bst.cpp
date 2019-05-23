@@ -21,7 +21,7 @@ struct node{
 void update_counter(node*, int);
 
 node* find(node* head, int key){
-    if( head==NULL or head->key==key) return head;
+    if( head==NULL || head->key==key) return head;
     else if(key < head->key) return find(head->left, key);
     else return find(head->right, key);
 }
