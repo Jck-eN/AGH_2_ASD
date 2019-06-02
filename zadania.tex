@@ -1,7 +1,7 @@
 \documentclass[11pt]{article}
 
 
-\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, bottom=2.00cm]{geometry}
+\usepackage[left=1.50cm, right=1.50cm, top=1.50cm, bottom=2.0cm]{geometry}
 \usepackage{polski}
 \usepackage[utf8]{inputenc}
 \usepackage{listings}
@@ -40,7 +40,7 @@
 	Insert i GetMedian mają złożoność $O(log(n))$.
 	Proszę zaimplementować w/w operacje.
 	
-	\item Proszę zaimplementować algorytm zliczający liczbę inwersji w tablicy
+	\item Proszę zaimplementować algorytm zliczający liczbę inwersji w tablicy.
 	(Inwersja to para indeksów $i,j$ taka, że $ i<j $ oraz $T[i]>T[j] $)
 \end{enumerate}
 
@@ -138,7 +138,7 @@
 	\item Dana jest tablica \texttt{bool A[N][N];} Gracz początkowo znajduje się na (zadanej) pozycji $(x, y)$,
 	dla której zachodzi \texttt{A[y][x] == true}. Z danej pozycji wolno bezpośrednio przejść jedynie na pozycję,
 	której dokładnie jedna współrzędna różni się o 1, oraz której wartość w tablicy $A$ wynosi \texttt{true}.
-	Proszę napisać funkcję obliczający do ilu różnych pozycji może dojść gracz startując z zadanej pozycji $(x,~y)$.
+	Proszę napisać funkcję obliczający do ilu różnych pozycji może dojść gracz startując z zadanej pozycji $(x,y)$.
 	
 	\item Dana jest struktura węzła drzewa B-tree przechowującego unikalne klucze: \newline
 \begin{lstlisting}
@@ -185,12 +185,23 @@
 {\small \textit{	Wskazówka: Jaki związek ma długość drogi komiwojażera z długością minimalnego drzewa rozpinającego?}}
 \end{enumerate}
 
-\section{Ćwiczenia - Grafy - Znajdywanie najkrótszej ścieżki w grafie}
+\section{Ćwiczenia - Grafy - Algorytm Dijkstry}
 
 \begin{enumerate}
 	
 	\item Zaimplementuj algorytm Dijkstry dla grafu w dowolnej postaci.
 	\item Zmodyfikuj algorytm Dijkstry, aby móc odtworzyć najkrótszą ścieżkę między dwoma wierzchołkami grafu.
+	
+\end{enumerate}
+	
+\section{Ćwiczenia - Kolokwium nr 3}
+	Brak zadań obowiązkowych
+	
+\section{Ćwiczenia - Programowanie dynamiczne}
+\begin{enumerate}
+	
+	\item W lesie znajduje się n drzew stojących w jednej linii. Każde drzewo posiada określoną wartość, która należy traktować jako zysk po jego wycięciu. Nie możemy wyciąć więcej niż dwóch drzew pod rząd. Proszę zaimplementować funkcję pozwalającą określić które drzewa należy wyciąć, aby sumaryczny zysk był jak największy.
+	\item Dana jest tablica \texttt{string S[n]} będąca zbiorem słów oraz ciąg znaków \texttt{string t}. Napisz funkcję, która znajdzie najmniejszy taki ciąg słów ze zbioru $S$, aby po ich złączeniu otrzymać tekst $t$.
 	
 \end{enumerate}
 	

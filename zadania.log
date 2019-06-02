@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2019.2.23)  24 MAY 2019 14:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2019.2.23)  28 MAY 2019 15:48
 entering extended mode
 **./zadania.tex
 (zadania.tex
@@ -467,15 +467,15 @@ LaTeX Font Info:    ... okay on input line 19.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(56.9055pt, 500.484pt, 56.9055pt)
-* v-part:(T,H,B)=(56.9055pt, 681.15898pt, 56.9055pt)
+* h-part:(L,W,R)=(42.67912pt, 528.93675pt, 42.67912pt)
+* v-part:(T,H,B)=(42.67912pt, 695.38536pt, 56.9055pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
-* \textwidth=500.484pt
-* \textheight=681.15898pt
-* \oddsidemargin=-15.36449pt
-* \evensidemargin=-15.36449pt
-* \topmargin=-52.36449pt
+* \textwidth=528.93675pt
+* \textheight=695.38536pt
+* \oddsidemargin=-29.59087pt
+* \evensidemargin=-29.59087pt
+* \topmargin=-66.59087pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=11.0pt
@@ -556,11 +556,11 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 Here is how much of TeX's memory you used:
  2851 strings out of 493308
  38115 string characters out of 3138768
- 123439 words of memory out of 3000000
+ 124449 words of memory out of 3000000
  6385 multiletter control sequences out of 15000+200000
  13917 words of font info for 39 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 33i,4n,58p,255b,1241s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 33i,4n,58p,379b,1241s stack positions out of 5000i,500n,10000p,200000b,50000s
 {D:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/plit.en
 c}{D:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/pltt.enc}{D:/Program Files/Mi
 KTeX 2.9/fonts/enc/dvips/pl/plmi.enc}{D:/Program Files/MiKTeX 2.9/fonts/enc/dvi
@@ -573,7 +573,7 @@ rogram Files/MiKTeX 2.9/fonts/type1/public/pl/plr10.pfb><D:/Program Files/MiKTe
 X 2.9/fonts/type1/public/pl/plr8.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/p
 ublic/pl/plsy10.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plti10.p
 fb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/pltt10.pfb>
-Output written on zadania.pdf (4 pages, 90492 bytes).
+Output written on zadania.pdf (4 pages, 91459 bytes).
 PDF statistics:
  60 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

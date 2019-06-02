@@ -16,7 +16,7 @@ void print_path(int parent[], int v){
 
 int min_dist(int* d, int* visited){
     int min=INT_MAX, min_idx;
-    for(int v=0; v<n-1; v++){
+    for(int v=0; v<n; v++){
         if(visited[v]==false && d[v]<=min) 
         {
             min=d[v];
@@ -40,7 +40,7 @@ void dijkstra(int G[n][n], int src){
 
     d[src]=0;
 
-    for(int i=0; i<n-1; i++){
+    for(int i=0; i<n; i++){
         int u = min_dist(d, visited);
         visited[u]=true;
         for(int v=0; v<n; v++){
@@ -120,7 +120,7 @@ int main()
                     {8, 11, 0, 0, 0, 0, 1, 0, 7}, 
                     {0, 0, 2, 0, 0, 0, 6, 7, 0} 
                     }; 
-    dijkstra(G, 3);
+    dijkstra(G, 0);
     cout << endl;
     dijkstra_2(G, 3);
     
