@@ -29,6 +29,7 @@ int get(HT* ht, int id){
     int i=0;
     while(ht->c[h]->id!=id && i<=ht->size){
         h=(h+1)%ht->size;
+        tes
         i++;
     }
     return h;
